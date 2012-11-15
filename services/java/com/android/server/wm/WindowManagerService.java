@@ -5425,8 +5425,8 @@ public class WindowManagerService extends IWindowManager.Stub
 
     // Called by window manager policy.  Not exposed externally.
     @Override
-    public void reboot(boolean confirm) {
-        ShutdownThread.reboot(mContext, "", confirm);
+    public void reboot(boolean confirm, String reason) {
+        ShutdownThread.reboot(mContext, reason, confirm);
     }
 
     public void setInputFilter(IInputFilter filter) {
